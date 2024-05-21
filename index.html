@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prak 6.3</title>
+</head>
+<body>
+    <h1>Хто бігає ?</h1>
+    <form>
+        <p>Можливі відповіді:</p>
+        <div class="answers">
+            <input type="button" name="answer" value="літак" onclick="correctAnswer('літак')">
+            <input type="button" name="answer" value="човен" onclick="correctAnswer('човен')">
+            <input type="button" name="answer" value="кінь" onclick="correctAnswer('кінь')">
+        </div>
+    </form>
+    <div class="res" id="res"></div>
+
+    <script>
+        function correctAnswer(answer){
+            const result = document.getElementById('res');
+            if (answer === 'кінь') {
+                result.textContent = 'Правильно! Ти молодець';
+                result.style.color = 'green';
+            } else {
+                result.textContent = 'На жаль, неправильно, спробуй ще раз.';
+                result.style.color = 'red';
+            }
+        } 
+    </script>
+</body>
+</html>
